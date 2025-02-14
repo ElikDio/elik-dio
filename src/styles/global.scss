@@ -4,7 +4,12 @@
 body {
   margin: 0;
   background-color: variables.$colorBlack;
-  font-family: 'Anonymous Pro', monospace;
+  font-family: 'Inter', monospace;
+
+  user-select: none; /* Google & othrs */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
 }
 
 html {

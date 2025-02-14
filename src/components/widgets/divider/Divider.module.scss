@@ -1,0 +1,40 @@
+@use '../../../styles/variables.scss' as variables;
+
+.divider {
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  bottom: 1px;
+  padding: 16px 0;
+  border-top: 2px variables.$colorWhite solid;
+  border-bottom: 2px variables.$colorWhite solid;
+  box-shadow: 0 -5px 10px rgba(161, 179, 198, 0.55);
+}
+
+.images {
+  display: flex;
+  gap: 50px;
+  animation: move 30s linear infinite;
+}
+
+.imageWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.image {
+  height: 100%;
+  width: auto;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

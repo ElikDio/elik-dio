@@ -1,0 +1,14 @@
+@use '../../../styles/variables.scss' as variables;
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.header h1 {
+  color: variables.$colorWhite;
+  font-weight: bold;
+  font-size: 25px;
+}

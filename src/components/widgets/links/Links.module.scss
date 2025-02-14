@@ -1,0 +1,21 @@
+@use '../../../styles/variables.scss' as variables;
+
+.links {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.link {
+  display: flex;
+  max-width: 65px;
+  background-color: variables.$colorGray;
+  color: variables.$colorWhite;
+  padding: 10px 20px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: variables.$colorBlack;
+  }
+}
