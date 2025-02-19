@@ -1,36 +1,24 @@
 @use '../../../styles/variables.scss' as variables;
-@use '../../../styles/breakpoints.scss' as breakpoint;
 
-.divider {
+.companies {
   width: 100%;
   overflow: hidden;
   position: absolute;
   bottom: 1px;
   padding: 16px 0;
-  border-top: 2px variables.$colorWhite solid;
-  border-bottom: 2px variables.$colorWhite solid;
-  box-shadow: 0 -3px 10px variables.$colorWhiteShadow;
 }
 
 .images {
   display: flex;
   gap: 50px;
   animation: move 30s linear infinite;
-  
-  @include breakpoint.tablet {
-    animation: move 20s linear infinite;
-  }
-
-  @include breakpoint.mobile {
-    animation: move 10s linear infinite;
-  }
 }
 
 .imageWrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 20px;
+  height: 90px;
   flex-shrink: 0;
 }
 

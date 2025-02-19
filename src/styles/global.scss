@@ -5,6 +5,7 @@ body {
   margin: 0;
   background-color: variables.$colorBlack;
   font-family: 'Inter', monospace;
+  font-weight: bold;
 
   user-select: none; /* Google & othrs */
   -webkit-user-select: none; /* Safari */

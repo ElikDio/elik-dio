@@ -1,0 +1,24 @@
+@use '../../../styles/variables.scss' as variables;
+
+.name {
+  display: flex;
+  flex-direction: row;
+  background-color: variables.$colorGray;
+  padding: 10px 20px;
+  border-radius: 12px;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-height: 40px;
+  gap: 8px;
+}
+
+.name h1 {
+  font-size: 12px;
+  color: variables.$colorGrayDarkText;
+}
+
+.name svg {
+  max-height: 16px;
+  max-width: 16px;
+}

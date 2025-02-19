@@ -1,0 +1,16 @@
+@use '../../../styles/variables.scss' as variables;
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 5px;
+  max-width: 220px;
+  background-color: variables.$colorBlackAccent;
+}
+
+.title {
+  color: variables.$colorGrayText;
+  padding: 20px 5px;
+  border-bottom: 1.5px variables.$colorGrayLine solid;
+}

@@ -1,17 +1,51 @@
 @use '../../styles/variables.scss' as variables;
+@use '../../styles/breakpoints.scss' as breakpoint;
 
 .slogan {
   display: flex;
   flex-direction: column;
-  margin: 10px 0 0 370px;
+  margin: 10px 0 0 550px;
   gap: 0px;
+
+  @include breakpoint.small-monitor {
+    margin: 10px 0 0 20%;
+  }
+
+  @include breakpoint.tablet {
+    margin: 10px 10%;
+  }
+
+  @include breakpoint.mobile {
+    margin: 50px auto;
+    padding: 5px;
+  }
 }
 
 .slogan h1 {
   font-size: 70px;
-  font-weight: bold;
+  line-height: 85px;
   color: variables.$colorWhite;
-  text-shadow: 0px 5px 5px #b0c0d5;
+  text-shadow: 0px 5px 5px variables.$colorWhiteShadow;
+
+  @include breakpoint.small-monitor {
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  @include breakpoint.netbook {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  @include breakpoint.tablet {
+    font-size: 35px;
+    line-height: 45px;
+  }
+
+  @include breakpoint.mobile {
+    font-size: 32px;
+    line-height: 40px;
+  }
 
   &:nth-of-type(1) {
     margin-left: 0;
@@ -19,16 +53,74 @@
 
   &:nth-of-type(2) {
     margin-left: 160px;
+
+    @include breakpoint.large-monitor {
+      margin-left: 230px;
+    }
+
+    @include breakpoint.netbook {
+      margin-left: 100px;
+    }
+
+    @include breakpoint.tablet {
+      margin-left: 80px;
+    }
+
+    @include breakpoint.mobile {
+      margin-left: 60px;
+    }
   }
 
   &:nth-of-type(3) {
     margin-left: 380px;
+
+    @include breakpoint.large-monitor {
+      margin-left: 540px;
+    }
+
+    @include breakpoint.netbook {
+      margin-left: 250px;
+    }
+
+    @include breakpoint.tablet {
+      margin-left: 200px;
+    }
+
+    @include breakpoint.mobile {
+      margin-left: 120px;
+    }
   }
 }
 
 .keyboard {
   position: absolute;
-  left: 150px;
-  top: 100px;
-  width: 50%;
+  left: 300px;
+  top: 120px;
+  width: 900px;
+
+  @include breakpoint.small-monitor {
+    width: 600px;
+    top: 140px;
+    left: 5%;
+  }
+
+  @include breakpoint.netbook {
+    width: 500px;
+  }
+
+  @include breakpoint.tablet {
+    top: 160px;
+    width: 400px;
+  }
+
+  @include breakpoint.mobile {
+    position: unset;
+    margin: -60px auto;
+  }
+}
+.body {
+  @include breakpoint.mobile {
+    display: flex;
+    flex-direction: column;
+  }
 }

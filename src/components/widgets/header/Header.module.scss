@@ -1,14 +1,23 @@
 @use '../../../styles/variables.scss' as variables;
+@use '../../../styles/breakpoints.scss' as breakpoint;
 
 .header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 20px;
+
+  @include breakpoint.mobile {
+    padding: 20px 10px;
+  }
 }
 
 .header h1 {
   color: variables.$colorWhite;
-  font-weight: bold;
   font-size: 25px;
+
+  @include breakpoint.mobile {
+    width: 80px;
+    font-size: 20px;
+  }
 }
