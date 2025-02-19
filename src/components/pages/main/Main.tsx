@@ -1,5 +1,5 @@
-import { Divider } from '../widgets/divider/Divider';
-import { Header } from '../widgets/header/Header';
+import { Divider } from '../../widgets/divider/Divider';
+import { Header } from '../../widgets/header/Header';
 import styles from './Main.module.scss';
 
 export const Main: React.FC = () => {

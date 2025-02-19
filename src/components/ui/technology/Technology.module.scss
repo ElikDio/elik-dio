@@ -1,0 +1,43 @@
+@use '../../../styles/variables.scss' as variables;
+
+.technology {
+  max-width: 100px;
+  max-height: 100px;
+
+  &:hover {
+    h1 {
+      display: block;
+    }
+
+    span {
+      display: block;
+    }
+  }
+}
+
+.technology svg {
+  width: 100px;
+  height: 100px;
+}
+
+.technology h1 {
+  position: absolute;
+  color: variables.$colorWhite;
+  font-size: 25px;
+  width: 100px;
+  background-color: rgba(11, 0, 0, 0.3);
+  text-align: center;
+  margin-top: 35px;
+  display: none;
+}
+
+.technology span {
+  position: absolute;
+  margin-top: -1px;
+  margin-left: -1px;
+  border-radius: 20px;
+  width: 102px;
+  height: 102px;
+  background-color: rgba(27, 31, 35, 0.7);
+  display: none;
+}

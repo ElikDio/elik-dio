@@ -4,13 +4,52 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 20px 5px;
+  padding: 10px 5px;
   max-width: 220px;
   background-color: variables.$colorBlackAccent;
 }
 
 .title {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+
   color: variables.$colorGrayText;
   padding: 20px 5px;
   border-bottom: 1.5px variables.$colorGrayLine solid;
+}
+
+.title svg {
+  height: 20px;
+  width: 20px;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tab {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+
+  color: variables.$colorGrayText;
+  background-color: variables.$colorTabBackground;
+  border-radius: 12px;
+  padding: 12px;
+  width: 100%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: variables.$colorGrayLine;
+  }
+}
+
+.active {
+  background-color: variables.$colorTabActive;
 }
