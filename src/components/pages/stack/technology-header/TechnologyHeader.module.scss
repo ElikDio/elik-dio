@@ -1,0 +1,100 @@
+@use '../../../../styles/variables.scss' as variables;
+
+.technologyHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: flex-end;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.info h1 {
+  font-size: 45px;
+  font-weight: 500;
+}
+
+.info svg {
+  width: 80px;
+  height: 80px;
+}
+
+.technology {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.grade {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+
+  &:hover {
+    .hint {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.grade svg {
+  width: 30px;
+  height: 30px;
+}
+
+.hint {
+  margin-left: 10px;
+  margin-top: 4px;
+  color: variables.$colorGrayLine;
+  font-size: 15px;
+  max-width: 300px;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.line {
+  height: 1px;
+  background-color: variables.$colorWhiteShadow;
+}
+
+.description {
+  font-size: 16px;
+}
+
+.time {
+  padding: 16px;
+}
+
+.time h2 {
+  font-size: 45px;
+  font-weight: 500;
+}
+
+.backgroundIcon {
+  position: absolute;
+  top: -200px;
+  right: -150px;
+  z-index: -1;
+}
+
+.backgroundIcon svg {
+  width: 550px;
+  height: 550px;
+  z-index: -1;
+}

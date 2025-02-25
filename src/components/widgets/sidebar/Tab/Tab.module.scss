@@ -1,0 +1,34 @@
+@use '../../../../styles/variables.scss' as variables;
+
+.tab {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+
+  color: variables.$colorGrayText;
+  background-color: variables.$colorTabBackground;
+  border-radius: 12px;
+  padding: 12px;
+  width: 100%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: variables.$colorGrayLine;
+  }
+}
+
+.tab svg {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+}
+
+.active {
+  background-color: variables.$colorTabActive;
+}
+
+.secondary {
+  background-color: variables.$colorDarkGray;
+}

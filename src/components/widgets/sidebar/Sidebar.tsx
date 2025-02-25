@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import { Name } from '../../ui/name/Name';
 import { Links } from '../links/Links';
 import styles from './Sidebar.module.scss';
+import { Tab } from './Tab/Tab';
 
 interface SidebarProps {
   pageIcon: React.FC<React.SVGProps<SVGSVGElement>>;
@@ -34,16 +35,14 @@ export const Sidebar: React.FC<SidebarProps> = ({
         {config &&
           config.length > 0 &&
           config.map((tab, indexKey) => (
-            <li
-              onClick={() => onTabClick(tab.index)}
-              className={clsx(styles.tab, {
-                [styles.active]: tab.index === activeIndex,
-              })}
+            <Tab
               key={indexKey}
-            >
-              <tab.icon />
-              {tab.title}
-            </li>
+              onTabClick={onTabClick}
+              tabIcon={tab.icon}
+              activeIndex={activeIndex}
+              index={tab.index}
+              title={tab.title}
+            />
           ))}
       </ul>
     </section>

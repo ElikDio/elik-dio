@@ -30,26 +30,3 @@
   flex-direction: column;
   gap: 8px;
 }
-
-.tab {
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
-  align-items: center;
-
-  color: variables.$colorGrayText;
-  background-color: variables.$colorTabBackground;
-  border-radius: 12px;
-  padding: 12px;
-  width: 100%;
-  transition: all 0.3s ease;
-  cursor: pointer;
-
-  &:hover {
-    background-color: variables.$colorGrayLine;
-  }
-}
-
-.active {
-  background-color: variables.$colorTabActive;
-}

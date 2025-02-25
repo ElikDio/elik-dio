@@ -1,0 +1,23 @@
+@use '../../../../styles/variables.scss' as variables;
+
+.typeScript {
+  width: 100%;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  padding: 25px 0;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.line {
+  height: 1px;
+  background-color: variables.$colorGrayLine;
+}

@@ -1,19 +1,18 @@
+import { TechnologyData } from '../../../utils/technologies';
 import styles from './Technology.module.scss';
 
 interface TechnologyProps {
-  logo: React.FC<React.SVGProps<SVGSVGElement>>;
-  title: string;
+  technology: TechnologyData;
 }
 
-export const Technology: React.FC<TechnologyProps> = ({
-  logo: Logo,
-  title,
-}) => {
+export const Technology: React.FC<TechnologyProps> = ({ technology }) => {
   return (
     <div className={styles.technology}>
       <span></span>
-      <h1>{title}</h1>
-      <Logo />
+      <div className={styles.title}>
+        <h1>{technology.title}</h1>
+      </div>
+      <technology.icon />
     </div>
   );
 };

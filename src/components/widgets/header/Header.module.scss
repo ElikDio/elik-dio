@@ -13,7 +13,6 @@
 }
 
 .header h1 {
-  color: variables.$colorWhite;
   font-size: 25px;
 
   @include breakpoint.mobile {

@@ -23,8 +23,7 @@
 
 .slogan h1 {
   font-size: 70px;
-  line-height: 85px;
-  color: variables.$colorWhite;
+  line-height: 85px;color: variables.$colorWhite;
   text-shadow: 0px 5px 5px variables.$colorWhiteShadow;
 
   @include breakpoint.small-monitor {

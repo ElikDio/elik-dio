@@ -1,0 +1,80 @@
+@use '../../../../styles/variables.scss' as variables;
+
+.projectsHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.project {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.project h1 {
+  font-size: 45px;
+  font-weight: 500;
+}
+
+.project a {
+  display: flex;
+  max-width: 65px;
+  background-color: variables.$colorGray;
+  padding: 5px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: variables.$colorBlackAccent;
+  }
+}
+
+.project a svg {
+  width: 36px;
+  height: 36px;
+}
+
+.technologies {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.technologies svg {
+  width: 30px;
+  height: 30px;
+}
+
+.line {
+  height: 1px;
+  background-color: variables.$colorWhiteShadow;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 18px;
+  max-width: 600px;
+  font-weight: 500;
+}
+
+.backgroundIcon {
+  position: absolute;
+  top: -200px;
+  right: -150px;
+  z-index: -1;
+}
+
+.backgroundIcon svg {
+  width: 550px;
+  height: 550px;
+  z-index: -1;
+}
