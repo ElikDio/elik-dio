@@ -25,8 +25,8 @@ export const Sass: React.FC = () => {
         <div className={styles.right}>
           <ProjectsDemo
             projects={[
-              ProjectsConfig.GPN,
               ProjectsConfig.ElikDio,
+              ProjectsConfig.SmartDriving,
               ProjectsConfig.Layouts,
             ]}
           />

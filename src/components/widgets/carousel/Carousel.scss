@@ -1,0 +1,42 @@
+.carousel {
+  width: 600px;
+  margin: auto;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 395px;
+}
+
+.image {
+  width: 60px;
+  height: 125px;
+  filter: blur(2px);
+  opacity: 0.4;
+  transition:
+    border-radius 0.4s ease-in-out,
+    width 0.4s ease-in-out,
+    height 0.4s ease-in-out,
+    opacity 0.6s ease-in-out,
+    filter 0.3s ease-in-out,
+}
+
+.swiper-slide-next .image,
+.swiper-slide-prev .image {
+  cursor: pointer;
+  width: 120px;
+  height: 250px;
+  border-radius: 12px;
+  filter: blur(2px);
+  opacity: 0.4;
+}
+
+.swiper-slide-active .image {
+  width: 193px;
+  height: 395px;
+  border-radius: 20px;
+  filter: blur(0);
+  opacity: 1;
+}

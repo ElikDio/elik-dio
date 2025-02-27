@@ -4,13 +4,14 @@ import styles from './Goals.module.scss';
 
 interface GoalsProps {
   goals: string[];
+  withIcons?: boolean;
 }
 
-export const Goals: React.FC<GoalsProps> = ({ goals }) => {
+export const Goals: React.FC<GoalsProps> = ({ goals, withIcons = true }) => {
   return (
     <Container
-      title={'Goals'}
-      icon={GoalsIcon}
+      title={withIcons ? 'Goals' : undefined}
+      icon={withIcons ? GoalsIcon : undefined}
     >
       <div className={styles.goals}>
         {goals &&

@@ -1,0 +1,25 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  padding: 25px 0;
+}
+
+.demo {
+  width: 492px;
+  height: 254px;
+  object-fit: cover;
+  border-radius: 20px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.demo img {
+  width: 492px;
+  height: 254px;
+  transition: scale 0.4s ease;
+
+  &:hover {
+    scale: 1.02;
+  }
+}

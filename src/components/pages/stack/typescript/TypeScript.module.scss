@@ -21,3 +21,14 @@
   height: 1px;
   background-color: variables.$colorGrayLine;
 }
+
+.leetCode {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leetCode svg {
+  border-radius: 22px;
+}
