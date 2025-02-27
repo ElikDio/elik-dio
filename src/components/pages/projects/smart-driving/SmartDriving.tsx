@@ -9,7 +9,7 @@ export const SmartDriving: React.FC = () => {
       <ProjectsHeader project={ProjectsConfig.SmartDriving} />
       <div className={styles.main}>
         <a
-          href="https://smartdriving2.vercel.app/"
+          href="https://market.smartdriving.io"
           target="_blank"
           rel="noreferrer"
           className={styles.demo}

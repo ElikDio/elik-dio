@@ -1,0 +1,62 @@
+@use '../../../../../styles/variables.scss' as variables;
+
+.table {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px variables.$colorWhiteLine solid;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  background-color: variables.$colorWhite;
+  color: variables.$colorTabBackground;
+  padding: 8px 25px;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px 20px 20px;
+  gap: 8px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.data h1 {
+  font-size: 12px;
+}
+
+.data p {
+  font-size: 10px;
+  font-weight: 300;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: variables.$colorGrayLine;
+}
+
+.table svg {
+  position: absolute;
+  top: 20px;
+  left: -60px;
+  z-index: -1;
+}

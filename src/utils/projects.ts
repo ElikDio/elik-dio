@@ -73,7 +73,7 @@ export const ProjectsConfig = {
       TechnologiesConfig.Sass.icon,
       TechnologiesConfig.TypeScript.icon,
     ],
-    shortDescription: '',
+    shortDescription: 'Дизайн и вёрстка этого сайта',
     gitHubLink: 'https://github.com/ElikDio/elik-dio',
     anchorLink: '',
     backgroundIcon: ElikDioBackIcon,

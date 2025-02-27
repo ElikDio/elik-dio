@@ -27,7 +27,6 @@ export const Sass: React.FC = () => {
             projects={[
               ProjectsConfig.ElikDio,
               ProjectsConfig.SmartDriving,
-              ProjectsConfig.Layouts,
             ]}
           />
 

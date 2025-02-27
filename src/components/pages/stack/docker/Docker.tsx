@@ -2,6 +2,8 @@ import { AdditionalTechnologies } from '../../../../components/widgets/additiona
 import { TechnologiesConfig } from '../../../../utils/technologies';
 import { TechnologyHeader } from '../technology-header/TechnologyHeader';
 import styles from './Docker.module.scss';
+import { goals } from './config';
+import { Terminal } from './terminal/Terminal';
 
 export const Docker: React.FC = () => {
   return (
@@ -9,14 +11,15 @@ export const Docker: React.FC = () => {
       <TechnologyHeader technology={TechnologiesConfig.Docker} />
 
       <div className={styles.main}>
+        <Terminal rows={goals} />
 
-          <AdditionalTechnologies
-            technologies={[
-              TechnologiesConfig.Gitlab,
-              TechnologiesConfig.YandexCloud,
-              TechnologiesConfig.Nginx,
-            ]}
-          />
+        <AdditionalTechnologies
+          technologies={[
+            TechnologiesConfig.Gitlab,
+            TechnologiesConfig.YandexCloud,
+            TechnologiesConfig.Nginx,
+          ]}
+        />
       </div>
     </div>
   );
