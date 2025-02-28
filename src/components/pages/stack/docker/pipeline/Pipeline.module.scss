@@ -1,0 +1,14 @@
+@use '../../../../../styles/variables.scss' as variables;
+
+.pipeline {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.line {
+  height: 1px;
+  width: 70px;
+  background-color: variables.$colorWhite;
+}

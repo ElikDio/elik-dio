@@ -1,6 +1,12 @@
 @use '../../../../../styles/variables.scss' as variables;
 
 .table {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.main {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -54,9 +60,33 @@
   background-color: variables.$colorGrayLine;
 }
 
-.table svg {
+.main svg {
   position: absolute;
   top: 20px;
   left: -60px;
   z-index: -1;
+}
+
+.key {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 5px;
+  margin-left: 12px;
+  padding: 1px 6px;
+  font-size: 8px;
+  width: 85px;
+  gap: 2px;
+  color: variables.$colorBlack;
+  background-color: variables.$colorGrayLine;
+}
+
+.key p {
+  padding-left: 10px;
+  font-weight: 300;
+}
+
+.key svg {
+  width: 10px;
+  height: 10px;
 }

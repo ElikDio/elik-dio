@@ -1,0 +1,30 @@
+@use '../../../../styles/variables.scss' as variables;
+
+.main {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  padding: 25px 0;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.line {
+  height: 1px;
+  background-color: variables.$colorGrayLine;
+}
+
+.company {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.company svg {
+  border-radius: 30px;
+}

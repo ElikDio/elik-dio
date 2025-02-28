@@ -1,6 +1,8 @@
 import { AdditionalTechnologies } from '../../../../components/widgets/additional-technologies/AdditionalTechnologies';
 import { Container } from '../../../../components/widgets/container/Container';
 import { Goals } from '../../../../components/widgets/goals/Goals';
+import { ReactComponent as ITMO } from '../../../../styles/icons/companies/itmo.svg';
+import { ReactComponent as CompanyIcon } from '../../../../styles/icons/company.svg';
 import { TechnologiesConfig } from '../../../../utils/technologies';
 import { TechnologyHeader } from '../technology-header/TechnologyHeader';
 import styles from './Vue.module.scss';
@@ -21,7 +23,13 @@ export const Vue: React.FC = () => {
         />
 
         <div className={styles.right}>
-          <Container>ITMO + (nuxt + bootstap)</Container>
+          <Container
+          title="Company"
+          icon={CompanyIcon}>
+            <div className={styles.company}>
+              <ITMO />
+            </div>
+          </Container>
 
           <span className={styles.line}></span>
 

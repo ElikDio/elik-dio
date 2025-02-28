@@ -1,0 +1,30 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding: 30px 0;
+}
+
+.upper {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+}
+
+
+.pipeline {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pipeline h3 {
+  font-size: 14px;
+  margin: auto;
+  width: 500px;
+  text-align: center;
+}
+
+.footer {
+  margin: auto;
+}

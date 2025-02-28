@@ -1,6 +1,21 @@
 .main {
   display: flex;
-  flex-direction: column;
-  gap: 50px;
+  flex-direction: row;
+  gap: 100px;
   padding: 25px 0;
+}
+
+.database {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+
+  & > :nth-child(2) {
+    margin-left: 60px;
+  }
+}
+
+.right {
+  display: flex;
+  margin-left: -60px;
 }

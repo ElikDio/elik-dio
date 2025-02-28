@@ -83,7 +83,8 @@ export const TechnologiesConfig = {
   Docker: {
     icon: DockerIcon,
     title: 'Docker',
-    description: '',
+    description:
+      'Активно использую Docker для масштабируемого развертывания приложений',
     grade: 3,
     gradeColor: '#2396ed',
     years: 3,
