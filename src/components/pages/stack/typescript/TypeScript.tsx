@@ -32,17 +32,17 @@ export const TypeScript: React.FC = () => {
             <div className={styles.links}>
               <a
                 className={styles.github}
-                href={''}
-                target="_blank"
-                rel="noreferrer"
+                // href={''}
+                // target="_blank"
+                // rel="noreferrer"
               >
                 <GitHubIcon />
               </a>
               <a
                 className={styles.leetCode}
-                href={''}
-                target="_blank"
-                rel="noreferrer"
+                // href={''}
+                // target="_blank"
+                // rel="noreferrer"
               >
                 <LeetCode />
               </a>

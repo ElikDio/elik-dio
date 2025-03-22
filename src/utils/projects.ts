@@ -16,6 +16,7 @@ export const ProjectsConfig = {
   SortFiles: {
     icon: SortFilesIcon,
     title: 'SortFiles',
+    demoLink: 'https://sort-files.ru',
     bundleTechnologies: [
       TechnologiesConfig.React.icon,
       TechnologiesConfig.Sass.icon,
@@ -29,6 +30,7 @@ export const ProjectsConfig = {
   SmartDriving: {
     icon: SmartDrivingIcon,
     title: 'SmartDriving',
+    demoLink: 'https://smartdriving-marketplace-demo.vercel.app/',
     bundleTechnologies: [
       TechnologiesConfig.Next.icon,
       TechnologiesConfig.Sass.icon,
@@ -94,6 +96,7 @@ export interface ProjectData {
   title: string;
   bundleTechnologies: React.FC<React.SVGProps<SVGSVGElement>>[];
   shortDescription: string;
+  demoLink?: string;
   gitHubLink?: string;
   anchorLink: string;
   backgroundIcon?: React.FC<React.SVGProps<SVGSVGElement>>;

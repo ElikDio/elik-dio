@@ -16,7 +16,7 @@ import { TypeScript } from './typescript/TypeScript';
 import { Vue } from './vue/Vue';
 
 export const Stack: React.FC = () => {
-  const [technologyIndex, setTechnologyIndex] = useState<number>(5);
+  const [technologyIndex, setTechnologyIndex] = useState<number>(0);
 
   const technologies = [
     <React />,

@@ -1,3 +1,5 @@
+@use '../../../../styles/variables.scss' as variables;
+
 .main {
   display: flex;
   flex-direction: row;
@@ -8,11 +10,40 @@
 .database {
   display: flex;
   flex-direction: column;
+  margin-left: -72px;
   gap: 60px;
 
   & > :nth-child(2) {
     margin-left: 60px;
   }
+}
+
+.left {
+  display: flex;
+}
+
+.line {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+}
+
+.first {
+  height: 0.5px;
+  width: 60px;
+  background-color: variables.$colorGrayLine;
+}
+
+.second {
+  height: 250px;
+  width: 1px;
+  background-color: variables.$colorGrayLine;
+}
+
+.third {
+  height: 1px;
+  width: 120px;
+  background-color: variables.$colorGrayLine;
 }
 
 .right {

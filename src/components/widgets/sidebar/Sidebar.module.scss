@@ -6,6 +6,7 @@
   gap: 10px;
   padding: 10px 5px;
   max-width: 220px;
+  min-height: 100vh;
   background-color: variables.$colorBlackAccent;
 }
 
@@ -16,7 +17,10 @@
   align-items: center;
 
   color: variables.$colorGrayText;
-  padding: 20px 5px;
+  padding: 5px 0 20px 5px;
+}
+
+.border {
   border-bottom: 1.5px variables.$colorGrayLine solid;
 }
 

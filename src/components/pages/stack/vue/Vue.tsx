@@ -1,7 +1,7 @@
 import { AdditionalTechnologies } from '../../../../components/widgets/additional-technologies/AdditionalTechnologies';
 import { Container } from '../../../../components/widgets/container/Container';
 import { Goals } from '../../../../components/widgets/goals/Goals';
-import { ReactComponent as ITMO } from '../../../../styles/icons/companies/itmo.svg';
+import { ReactComponent as ITMO } from '../../../../styles/icons/companies/itmo-transparent-back.svg';
 import { ReactComponent as CompanyIcon } from '../../../../styles/icons/company.svg';
 import { TechnologiesConfig } from '../../../../utils/technologies';
 import { TechnologyHeader } from '../technology-header/TechnologyHeader';
@@ -24,11 +24,15 @@ export const Vue: React.FC = () => {
 
         <div className={styles.right}>
           <Container
-          title="Company"
-          icon={CompanyIcon}>
-            <div className={styles.company}>
+            title="Company"
+            icon={CompanyIcon}
+          >
+            <a
+              className={styles.company}
+              // href={''}
+            >
               <ITMO />
-            </div>
+            </a>
           </Container>
 
           <span className={styles.line}></span>

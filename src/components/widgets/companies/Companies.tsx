@@ -7,20 +7,22 @@ export const Companies: React.FC = () => {
       <div className={styles.images}>
         {companiesImagesSources &&
           companiesImagesSources.length > 0 &&
-          [...companiesImagesSources, ...companiesImagesSources].map(
-            (imageSource, index) => (
-              <div
-                className={styles.imageWrapper}
-                key={index}
-              >
-                <img
-                  src={imageSource}
-                  alt={`company ${index + 1}`}
-                  className={styles.image}
-                />
-              </div>
-            )
-          )}
+          [
+            ...companiesImagesSources,
+            ...companiesImagesSources,
+            ...companiesImagesSources,
+          ].map((imageSource, index) => (
+            <div
+              className={styles.imageWrapper}
+              key={index}
+            >
+              <img
+                src={imageSource}
+                alt={`company ${index + 1}`}
+                className={styles.image}
+              />
+            </div>
+          ))}
       </div>
     </div>
   );

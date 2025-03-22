@@ -7,7 +7,7 @@ import { Tab } from './Tab/Tab';
 interface SidebarProps {
   pageIcon: React.FC<React.SVGProps<SVGSVGElement>>;
   pageTitle: string;
-  config: {
+  config?: {
     icon: React.FC<React.SVGProps<SVGSVGElement>>;
     title: string;
     index: number;
@@ -27,7 +27,11 @@ export const Sidebar: React.FC<SidebarProps> = ({
     <section className={styles.sidebar}>
       <Name />
       <Links />
-      <div className={styles.title}>
+      <div
+        className={clsx(styles.title, {
+          [styles.border]: config && config.length,
+        })}
+      >
         <PageIcon />
         {pageTitle}
       </div>

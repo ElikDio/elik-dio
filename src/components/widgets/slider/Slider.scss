@@ -1,0 +1,40 @@
+.slider {
+  margin: auto;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider {
+  margin: auto;
+}
+
+.swiper-slide > div {
+  transform: scale(0.6);
+  opacity: 0.4;
+  filter: blur(2px);
+  transition:
+    transform 0.6s ease-in-out,
+    opacity 0.6s ease-in-out,
+    filter 0.3s ease-in-out;
+}
+
+.swiper-slide-next > div {
+  cursor: pointer;
+  opacity: 0.6;
+  filter: blur(3px);
+}
+.swiper-slide-prev > div {
+  cursor: pointer;
+  opacity: 0.6;
+  filter: blur(6px);
+}
+
+.swiper-slide-active > div {
+  transform: scale(1);
+  opacity: 1;
+  filter: blur(0);
+}

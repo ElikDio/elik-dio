@@ -1,0 +1,81 @@
+@use '../../../../styles/variables.scss' as variables;
+
+.expeirenceItem {
+  width: 650px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 24px 16px 24px;
+  border-radius: 20px;
+  background-color: variables.$colorDarkGray;
+  box-shadow: -8px 8px 0px black;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: variables.$colorGray;
+    transform: translateY(5px);
+    box-shadow: -8px 6px 0px black;
+  }
+}
+
+.line {
+  height: 1px;
+  background-color: variables.$colorGrayLine;
+}
+
+.expeirenceItem h1 {
+  font-size: 30px;
+}
+
+.left {
+  display: flex;
+  width: 200px;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.technologies {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.technologies svg {
+  max-width: 24px;
+  max-height: 24px;
+  border-radius: 6px;
+}
+
+.right {
+  display: flex;
+  width: 180px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.dates {
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: variables.$colorGray;
+}
+
+.position {
+  display: flex;
+  flex-direction: row;
+  padding-right: 5px;
+  font-size: 14px;
+  gap: 12px;
+  align-items: center;
+  text-align: end;
+}
+
+.position svg {
+  max-width: 24px;
+  max-height: 22.4px;
+}

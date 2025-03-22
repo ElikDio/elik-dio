@@ -25,7 +25,7 @@ export const Projects: React.FC = () => {
           { icon: SortFilesIcon, title: 'SortFiles', index: 0 },
           { icon: SmartDrivingIcon, title: 'SmartDriving', index: 1 },
           { icon: ARGIcon, title: 'ARG', index: 2 },
-          { icon: ElikDioIcon, title: 'ElikDio', index: 3 },
+          // { icon: ElikDioIcon, title: 'ElikDio', index: 3 },
         ]}
         onTabClick={setProjectIndex}
         activeIndex={projectIndex}

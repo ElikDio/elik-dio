@@ -9,7 +9,7 @@ export const SortFiles: React.FC = () => {
       <ProjectsHeader project={ProjectsConfig.SortFiles} />
       <div className={styles.main}>
         <a
-          href="https://sort-files.ru"
+          href={ProjectsConfig.SortFiles.demoLink}
           target="_blank"
           rel="noreferrer"
           className={styles.demo}
@@ -24,7 +24,6 @@ export const SortFiles: React.FC = () => {
             'Предоставить пользователям удобную платформу для скачивания Sort Files',
             'Рассказать о возможностях приложения и его преимущества',
             'Обеспечить поддержку пользователей через раздел вопросов и предложений',
-            'Обратная связь – возможность отправить комментарии или пожелания',
           ]}
           withIcons={false}
         />

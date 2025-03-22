@@ -13,21 +13,28 @@ export const PostgreSQL: React.FC = () => {
       <TechnologyHeader technology={TechnologiesConfig.PostgreSQL} />
 
       <div className={styles.main}>
-        <div className={styles.database}>
-          <Table
-            keyId="db_stack"
-            name="Database"
-            rows={dbTechnologies}
-            background={DatabaseBack}
-          />
+        <div className={styles.left}>
+          <div className={styles.line}>
+            <span className={styles.first}></span>
+            <span className={styles.second}></span>
+            <span className={styles.third}></span>
+          </div>
+          <div className={styles.database}>
+            <Table
+              keyId="db_stack"
+              name="Database"
+              rows={dbTechnologies}
+              background={DatabaseBack}
+            />
 
-          <Table
-            keyId="back_stack"
-            name="Backend"
-            rows={backTechnologies}
-            background={BackendBack}
-            width={400}
-          />
+            <Table
+              keyId="back_stack"
+              name="Backend"
+              rows={backTechnologies}
+              background={BackendBack}
+              width={400}
+            />
+          </div>
         </div>
 
         <div className={styles.right}>

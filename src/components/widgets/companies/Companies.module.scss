@@ -10,7 +10,7 @@
 
 .images {
   display: flex;
-  gap: 50px;
+  gap: 40px;
   animation: move 30s linear infinite;
 }
 
@@ -18,7 +18,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 90px;
+  height: 70px;
   flex-shrink: 0;
 }
 

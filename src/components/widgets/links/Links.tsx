@@ -3,13 +3,14 @@ import { ReactComponent as Github } from '../../../styles/icons/github.svg';
 import { ReactComponent as HH } from '../../../styles/icons/hh.svg';
 import { ReactComponent as Tg } from '../../../styles/icons/tg.svg';
 import styles from './Links.module.scss';
+import { MyLinks } from 'src/utils/links';
 
 export const Links: React.FC = () => {
   return (
     <div className={styles.links}>
       <a
         className={styles.link}
-        href="https://t.me/elik_id"
+        href={MyLinks.Telegram}
         target="_blank"
         rel="noreferrer"
       >
@@ -17,7 +18,7 @@ export const Links: React.FC = () => {
       </a>
       <a
         className={styles.link}
-        href="https://github.com/ElikDio"
+        href={MyLinks.Github}
         target="_blank"
         rel="noreferrer"
       >
@@ -25,7 +26,7 @@ export const Links: React.FC = () => {
       </a>
       <a
         className={styles.link}
-        href="https://spb.hh.ru/resume/c4c9fb11ff0d2dabd00039ed1f6974424d7178"
+        href={MyLinks.HH}
         target="_blank"
         rel="noreferrer"
       >
