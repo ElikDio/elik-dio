@@ -15,19 +15,17 @@ export const SmartDriving: React.FC = () => {
           className={styles.demo}
         >
           <img
-            src={'/photos/demos/smartdriving.png'}
-            alt={'SmartDriving'}
+            src={ProjectsConfig.SmartDriving.demoImage}
+            alt={ProjectsConfig.SmartDriving.title}
           />
         </a>
-        <Goals
-          goals={[
-            'Сверстал весь маркетплейс по дизайну в Figma',
-            'Использовал модульные стили и вспомогательные библиотеки (например, clsx)',
-            'Выносил UI-компоненты и настраивал адаптивность под разные экраны',
-            'Выстравивал FSD архитектуру ',
-          ]}
-          withIcons={false}
-        />
+
+        <div className={styles.right}>
+          <Goals
+            goals={ProjectsConfig.SmartDriving.goals}
+            withIcons={false}
+          />
+        </div>
       </div>
     </div>
   );

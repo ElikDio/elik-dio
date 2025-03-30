@@ -21,7 +21,7 @@ export const ProjectsDemo: React.FC<ProjectsDemoProps> = ({ projects }) => {
             <Tab
               key={index}
               onTabClick={(index: number) => {}}
-              tabIcon={project.icon}
+              tabIcon={project.tabIcon}
               activeIndex={projects.length}
               index={index}
               title={project.title}

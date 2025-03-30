@@ -12,15 +12,17 @@ export const React: React.FC = () => {
       <TechnologyHeader technology={TechnologiesConfig.React} />
 
       <div className={styles.main}>
-        <Goals
-          goals={[
-            'Создавал и оптимизировал компоненты',
-            'Управлял состояниями с MobX и ReduX',
-            'Выстраивал архитектуру с нуля',
-            'Работал с серверными API через REST и WS',
-            'Повышал скорость работы методов',
-          ]}
-        />
+        <div className={styles.left}>
+          <Goals
+            goals={[
+              'Создавал и оптимизировал компоненты',
+              'Управлял состояниями с MobX и ReduX',
+              'Выстраивал архитектуру с нуля',
+              'Работал с серверными API через REST и WS',
+              'Повышал скорость работы методов',
+            ]}
+          />
+        </div>
 
         <div className={styles.right}>
           <ProjectsDemo
@@ -30,8 +32,6 @@ export const React: React.FC = () => {
               ProjectsConfig.ARG,
             ]}
           />
-
-          <span className={styles.line}></span>
 
           <AdditionalTechnologies
             technologies={[

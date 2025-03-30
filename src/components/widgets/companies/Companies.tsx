@@ -10,7 +10,6 @@ export const Companies: React.FC = () => {
           [
             ...companiesImagesSources,
             ...companiesImagesSources,
-            ...companiesImagesSources,
           ].map((imageSource, index) => (
             <div
               className={styles.imageWrapper}

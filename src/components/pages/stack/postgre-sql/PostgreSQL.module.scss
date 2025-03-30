@@ -1,4 +1,5 @@
 @use '../../../../styles/variables.scss' as variables;
+@use '../../../../styles/breakpoints.scss' as breakpoint;
 
 .main {
   display: flex;
@@ -48,5 +49,18 @@
 
 .right {
   display: flex;
-  margin-left: -60px;
+  margin-left: -80px;
+
+  @include breakpoint.small-monitor {
+    margin-left: -150px;
+  }
+
+  @include breakpoint.netbook {
+    margin-left: -180px;
+    gap: 40px;
+  }
+
+  @media only screen and (max-width: 950px) {
+    display: none;
+  }
 }

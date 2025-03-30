@@ -1,10 +1,80 @@
+@use '../../../styles/breakpoints.scss' as breakpoint;
+
 .projects {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  @include breakpoint.tablet {
+    display: none;
+  }
 }
 
 .project {
-    width: 100%;
-    padding: 10px 80px 0 40px;
+  width: 100%;
+  padding: 10px 80px 0 40px;
+  overflow: hidden;
+
+  @media only screen and (max-width: 1190px) {
+    padding: 10px 80px 0 20px;
+  }
+}
+
+.projectsMobile {
+  display: none;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  
+  @include breakpoint.tablet {
+    display: flex;
+  }
+}
+
+.projectCards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+  gap: 12px;
+  margin-bottom: 50px;
+}
+
+.sortFilesDemo,
+.smartDrivingDemo {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+
+  &:hover {
+    &::before {
+      box-shadow: none;
+    }
+    transform: translateY(5px);
+  }
+}
+
+.sortFilesDemo::before,
+.smartDrivingDemo::before {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  z-index: 1;
+  border-radius: 30px;
+  content: '';
+  position: absolute;
+}
+
+.sortFilesDemo::before {
+  box-shadow: inset 0 0 20px rgba(122, 99, 255, 0.6);
+}
+.smartDrivingDemo::before {
+  box-shadow: inset 0 0 30px rgba(251, 104, 104, 0.6);
+}
+
+.sortFilesDemo img {
+  margin-top: -50px;
 }

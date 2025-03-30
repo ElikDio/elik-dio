@@ -1,0 +1,92 @@
+@use '../../../../styles/variables.scss' as variables;
+@use '../../../../styles/breakpoints.scss' as breakpoint;
+
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 20px;
+  padding: 10px 20px;
+  background-color: variables.$colorTabBackground;
+  overflow: hidden;
+  transition: all 0.6s ease;
+  max-height: 75px;
+}
+
+.covered {
+  max-height: 350px;
+  height: 350px;
+
+  @include breakpoint.mobile {
+    max-height: 250px;
+    height: 250px;
+  }
+}
+
+.uncovered {
+  max-height: 600px;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.info h1 {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.info svg {
+  min-width: 55px;
+  min-height: 55px;
+  width: 55px;
+  height: 55px;
+  border-radius: 16px;
+}
+
+.projectTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.additional {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.additional svg {
+  min-width: 28px;
+  min-height: 28px;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+}
+
+.demoInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.line {
+  height: 1px;
+  width: 100%;
+  background-color: variables.$colorGrayLine;
+}
+
+.demoInfo h2 {
+  width: 340px;
+  font-weight: 400;
+}
+
+.demo {
+  display: flex;
+  margin: auto;
+  margin-top: 20px;
+}

@@ -1,6 +1,17 @@
 .carousel {
   width: 600px;
-  margin: auto;
+
+  @media only screen and (max-width: 950px) {
+    width: 500px;
+  }
+
+  @media only screen and (max-width: 520px) {
+    width: 400px;
+  }
+
+  @media only screen and (max-width: 450px) {
+    width: 380px
+  }
 }
 
 .swiper-slide {
@@ -8,6 +19,14 @@
   justify-content: center;
   align-items: center;
   height: 395px;
+
+  @media only screen and (max-width: 950px) {
+    height: 329px;
+  }
+
+  @media only screen and (max-width: 520px) {
+    height: 265px;
+  }
 }
 
 .image {
@@ -31,6 +50,11 @@
   border-radius: 12px;
   filter: blur(2px);
   opacity: 0.4;
+
+  @media only screen and (max-width: 520px) {
+    width: 100px;
+    height: 208px;
+  }
 }
 
 .swiper-slide-active .image {
@@ -39,4 +63,14 @@
   border-radius: 20px;
   filter: blur(0);
   opacity: 1;
+
+  @media only screen and (max-width: 950px) {
+    width: 161px;
+    height: 329px;
+  }
+
+  @media only screen and (max-width: 520px) {
+    width: 130px;
+    height: 265px;
+  }
 }

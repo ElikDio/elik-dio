@@ -1,0 +1,74 @@
+@use '../../../../styles/variables.scss' as variables;
+
+.technologyCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 20px;
+  padding: 10px 20px;
+  background-color: variables.$colorTabBackground;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.info h1 {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.info svg {
+  min-width: 55px;
+  min-height: 55px;
+  width: 55px;
+  height: 55px;
+  border-radius: 16px;
+}
+
+.technologyTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.grade {
+  display: flex;
+  flex-direction: row;
+  gap: 1px;
+  cursor: help;
+}
+
+.grade svg {
+  min-width: 20px;
+  min-height: 20px;
+  width: 20px;
+  height: 20px;
+}
+
+.additional {
+  padding: 8px;
+  background-color: variables.$colorDarkGray;
+  border-radius: 14px;
+  gap: 8px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.additional svg:nth-child(3):last-child {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
+.additional svg {
+  min-width: 28px;
+  min-height: 28px;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+}

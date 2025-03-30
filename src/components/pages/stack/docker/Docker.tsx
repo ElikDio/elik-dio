@@ -17,16 +17,18 @@ export const Docker: React.FC = () => {
         <div className={styles.upper}>
           <Terminal rows={goals} />
 
-          <AdditionalTechnologies
-            technologies={[
-              TechnologiesConfig.Gitlab,
-              TechnologiesConfig.YandexCloud,
-              TechnologiesConfig.Nginx,
-            ]}
-          />
+          <div className={styles.right}>
+            <AdditionalTechnologies
+              technologies={[
+                TechnologiesConfig.Gitlab,
+                TechnologiesConfig.YandexCloud,
+                TechnologiesConfig.Nginx,
+              ]}
+            />
+          </div>
         </div>
         <div className={styles.footer}>
-          <Container width="650px">
+          <Container width="500px">
             <div className={styles.pipeline}>
               <h3>
                 Настраивал пайплайны в GitLab CI/CD для автоматического сборки,

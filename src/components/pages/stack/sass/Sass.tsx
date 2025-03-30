@@ -12,22 +12,21 @@ export const Sass: React.FC = () => {
       <TechnologyHeader technology={TechnologiesConfig.Sass} />
 
       <div className={styles.main}>
-        <Goals
-          goals={[
-            'Активно использовал SCSS Modules',
-            'Внедрял миксины и переменные',
-            'Поддерживал адаптивную вёрстку',
-            'Создавал глобальные дизайн-системы',
-            'Обеспечивал изолированность и читаемость',
-          ]}
-        />
+        <div className={styles.left}>
+          <Goals
+            goals={[
+              'Активно использовал SCSS Modules',
+              'Внедрял миксины и переменные',
+              'Поддерживал адаптивную вёрстку',
+              'Создавал глобальные дизайн-системы',
+              'Обеспечивал изолированность и читаемость',
+            ]}
+          />
+        </div>
 
         <div className={styles.right}>
           <ProjectsDemo
-            projects={[
-              ProjectsConfig.ElikDio,
-              ProjectsConfig.SmartDriving,
-            ]}
+            projects={[ProjectsConfig.ElikDio, ProjectsConfig.SmartDriving]}
           />
 
           <span className={styles.line}></span>

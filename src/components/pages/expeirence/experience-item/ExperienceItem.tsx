@@ -1,5 +1,5 @@
-import { ExperienceData } from 'src/utils/experience';
-import { MyLinks } from 'src/utils/links';
+import { ExperienceData } from '../../../../utils/experience';
+import { MyLinks } from '../../../../utils/links';
 import { ReactComponent as ExperienceIcon } from '../../../../styles/icons/experience.svg';
 import styles from './ExperienceItem.module.scss';
 

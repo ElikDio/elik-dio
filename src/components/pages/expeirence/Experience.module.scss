@@ -1,9 +1,22 @@
 @use '../../../styles/variables.scss' as variables;
+@use '../../../styles/breakpoints.scss' as breakpoint;
 
-.expeirence {
+.experience {
   display: flex;
   flex-direction: row;
-  gap: 80px;
+  gap: 110px;
+
+  @media only screen and (max-width: 1200px) {
+    gap: 40px;
+  }
+  
+  @include breakpoint.netbook {
+    gap: 20px;
+  }
+
+  @include breakpoint.tablet {
+    display: none;
+  }
 }
 
 .header {
@@ -17,10 +30,18 @@
 .jobs {
   display: flex;
   flex-direction: row;
-  gap: 80px;
+  gap: 50px;
+  
+  @media only screen and (max-width: 1200px) {
+    gap: 40px;
+  }
+
+  @include breakpoint.netbook {
+    gap: 30px;
+  }
 }
 
-.expeirenceItems {
+.experienceItems {
   display: flex;
   flex-direction: column;
   margin-top: 20px;
@@ -33,6 +54,10 @@
   align-items: center;
   padding-top: 40px;
   gap: 60px;
+
+  @media only screen and (max-width: 850px) {
+    display: none;
+  }
 }
 
 .line {
@@ -42,6 +67,10 @@
   width: 2px;
   height: 100vh;
   background-color: variables.$colorDarkGray;
+
+  @media only screen and (max-width: 850px) {
+    display: none;
+  }
 }
 
 .job {
@@ -57,4 +86,21 @@
 .job svg {
   width: 30px;
   height: 30px;
+}
+
+.experienceMobile {
+  display: none;
+  flex-direction: column;
+
+  @include breakpoint.tablet {
+    display: flex;
+  }
+}
+
+.experienceMobileItems {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+  gap: 18px;
 }

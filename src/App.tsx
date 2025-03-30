@@ -8,9 +8,9 @@ export const App: React.FC = () => {
   return (
     <div className="App">
       <Main />
-      {/* <Stack /> */}
-      {/* <Projects /> */}
-      {/* <Experience /> */}
+      <Stack />
+      <Projects />
+      <Experience />
     </div>
   );
 };

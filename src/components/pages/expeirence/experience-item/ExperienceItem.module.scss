@@ -1,4 +1,5 @@
 @use '../../../../styles/variables.scss' as variables;
+@use '../../../../styles/breakpoints.scss' as breakpoint;
 
 .expeirenceItem {
   width: 650px;
@@ -17,6 +18,10 @@
     transform: translateY(5px);
     box-shadow: -8px 6px 0px black;
   }
+
+  @include breakpoint.netbook {
+    width: 500px;
+  }
 }
 
 .line {
@@ -30,7 +35,7 @@
 
 .left {
   display: flex;
-  width: 200px;
+  width: 220px;
   flex-direction: column;
   gap: 8px;
 }

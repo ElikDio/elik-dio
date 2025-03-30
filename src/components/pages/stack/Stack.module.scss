@@ -1,10 +1,51 @@
+@use '../../../styles/breakpoints.scss' as breakpoint;
+@use '../../../styles/variables.scss' as variables;
+
 .stack {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  @include breakpoint.tablet {
+    display: none;
+  }
 }
 
 .technology {
-    width: 100%;
-    padding: 10px 80px 0 40px;
+  overflow: hidden;
+  width: 100%;
+  padding: 10px 60px 0 40px;
+  @include breakpoint.netbook {
+    padding: 10px 40px 0 40px;
+  }
+
+  @media only screen and (max-width: 950px) {
+    padding: 10px 20px 0 40px;
+  }
+}
+
+.stackMobile {
+  display: none;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+
+  @include breakpoint.tablet {
+    display: flex;
+  }
+}
+
+.technologies {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+  gap: 12px;
+}
+
+.hint {
+  margin: 10px 14px 30px 14px;
+  color: variables.$colorGrayLine;
+  font-size: 15px;
+  max-width: 310px;
 }

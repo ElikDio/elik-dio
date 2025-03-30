@@ -1,12 +1,58 @@
 @use './variables.scss' as variables;
 @use './nullstyle.scss';
 
+@font-face {
+  font-family: 'SF Pro Text';
+  src: url('../../public/fonts/SFProText-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Text';
+  src: url('../../public/fonts/SFProText-RegularItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SF Pro Text';
+  src: url('../../public/fonts/SFProText-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Text';
+  src: url('../../public/fonts/SFProText-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'SF Pro Text';
+  src: url('../../public/fonts/SFProText-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'SF Pro Text';
+  src: url('../../public/fonts/SFProText-Semibold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'SF Pro Text';
+  src: url('../../public/fonts/SFProText-Heavy.ttf') format('truetype');
+  font-weight: 900;
+}
+
 body {
   margin: 0;
   background-color: variables.$colorBlack;
   color: variables.$colorWhite;
-  font-family: 'Inter', monospace;
+  font-family: 'SF Pro Text', sans-serif;
   font-weight: bold;
+  font-style: normal;
 
   user-select: none; /* Google & othrs */
   -webkit-user-select: none; /* Safari */

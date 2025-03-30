@@ -31,37 +31,50 @@ import { ReactComponent as VueIcon } from '../styles/icons/technologies/vue.svg'
 import { ReactComponent as VuetifyIcon } from '../styles/icons/technologies/vuetify.svg';
 import { ReactComponent as WebpackIcon } from '../styles/icons/technologies/webpack.svg';
 import { ReactComponent as YandexCloudIcon } from '../styles/icons/technologies/yandex-cloud.svg';
+import { ReactComponent as ReactTabIcon } from '../styles/icons/tab-technologies/react.svg'
+import { ReactComponent as DockerTabIcon } from '../styles/icons/tab-technologies/docker.svg'
+import { ReactComponent as PostgreSQLTabIcon } from '../styles/icons/tab-technologies/pg.svg'
+import { ReactComponent as SassTabIcon } from '../styles/icons/tab-technologies/sass.svg'
+import { ReactComponent as TSTabIcon } from '../styles/icons/tab-technologies/typescript.svg'
+import { ReactComponent as VueTabIcon } from '../styles/icons/tab-technologies/vue.svg'
 
 export const TechnologiesConfig = {
   React: {
     icon: ReactIcon,
+    tabIcon: ReactTabIcon,
     title: 'React',
     description: 'React — это моя основная технология для разработки',
     grade: 4,
     gradeColor: '#61dbfb',
     years: 3,
     backgroundIcon: ReactBackIcon,
+    bundleTechnologies: [NextIcon, MobxIcon, ReduxIcon, WebpackIcon],
   },
   TypeScript: {
     icon: TypeScriptIcon,
+    tabIcon: TSTabIcon,
     title: 'TypeScript',
     description: 'TypeScript - является основой большинства моих проектов',
     grade: 4,
     gradeColor: '#007acc',
     years: 4,
     backgroundIcon: TypeScriptBackIcon,
+    bundleTechnologies: [JavaScriptIcon, JestIcon, EslintIcon, AxiosIcon],
   },
   Sass: {
     icon: SassIcon,
+    tabIcon: SassTabIcon,
     title: 'Sass/Scss',
     description: 'Более 3 лет я использую препроцессор в своих проектах',
     grade: 4,
     gradeColor: '#cd6799',
     years: 3.5,
     backgroundIcon: SassBackIcon,
+    bundleTechnologies: [CssIcon, BootstrapIcon, TailwindIcon],
   },
   Vue: {
     icon: VueIcon,
+    tabIcon: VueTabIcon,
     title: 'Vue',
     description:
       'Vue - технология, с которой я недавно познакомился в рамках нового проекта',
@@ -69,9 +82,11 @@ export const TechnologiesConfig = {
     gradeColor: '#41b883',
     years: 0.05,
     backgroundIcon: VueBackIcon,
+    bundleTechnologies: [NuxtIcon, VuetifyIcon, BootstrapIcon],
   },
   PostgreSQL: {
     icon: PostgreSQLIcon,
+    tabIcon: PostgreSQLTabIcon,
     title: 'PostgreSQL',
     description:
       'PostgreSQL — мощная и надежная СУБД, которую я использую для проектов',
@@ -79,9 +94,11 @@ export const TechnologiesConfig = {
     gradeColor: '#336791',
     years: 3,
     backgroundIcon: PostgreSQLBackIcon,
+    bundleTechnologies: [MongoIcon, OracleIcon, NodeJSIcon, JavaIcon ],
   },
   Docker: {
     icon: DockerIcon,
+    tabIcon: DockerTabIcon,
     title: 'Docker',
     description:
       'Активно использую Docker для масштабируемого развертывания приложений',
@@ -89,6 +106,7 @@ export const TechnologiesConfig = {
     gradeColor: '#2396ed',
     years: 3,
     backgroundIcon: DockerBackIcon,
+    bundleTechnologies: [GitlabIcon, YandexCloudIcon, NginxIcon],
   },
   Next: {
     icon: NextIcon,
@@ -178,10 +196,12 @@ export const TechnologiesConfig = {
 
 export interface TechnologyData {
   icon: React.FC<React.SVGProps<SVGSVGElement>>;
+  tabIcon?: React.FC<React.SVGProps<SVGSVGElement>>;
   title: string;
   description?: string;
   grade?: number;
   gradeColor?: string;
   years?: number;
   backgroundIcon?: React.FC<React.SVGProps<SVGSVGElement>>;
+  bundleTechnologies?: React.FC<React.SVGProps<SVGSVGElement>>[];
 }

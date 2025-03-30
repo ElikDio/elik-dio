@@ -1,17 +1,15 @@
+import { HeaderMobile } from 'src/components/widgets/header-mobile/HeaderMobile';
+import { TechnologiesConfig, TechnologyData } from 'src/utils/technologies';
 import { useState } from 'react';
+import { ReactComponent as BackgroundStackIcon } from '../../../styles/icons/back-technologies/stack.svg';
 import { ReactComponent as StackIcon } from '../../../styles/icons/stack.svg';
-import { ReactComponent as DockerIcon } from '../../../styles/icons/tab-technologies/docker.svg';
-import { ReactComponent as PgIcon } from '../../../styles/icons/tab-technologies/pg.svg';
-import { ReactComponent as ReactIcon } from '../../../styles/icons/tab-technologies/react.svg';
-import { ReactComponent as SassIcon } from '../../../styles/icons/tab-technologies/sass.svg';
-import { ReactComponent as TSIcon } from '../../../styles/icons/tab-technologies/typescript.svg';
-import { ReactComponent as VueIcon } from '../../../styles/icons/tab-technologies/vue.svg';
 import { Sidebar } from '../../widgets/sidebar/Sidebar';
 import styles from './Stack.module.scss';
 import { Docker } from './docker/Docker';
 import { PostgreSQL } from './postgre-sql/PostgreSQL';
 import { React } from './react/React';
 import { Sass } from './sass/Sass';
+import { TechnologyCard } from './technology-card/TechnologyCard';
 import { TypeScript } from './typescript/TypeScript';
 import { Vue } from './vue/Vue';
 
@@ -26,24 +24,75 @@ export const Stack: React.FC = () => {
     <PostgreSQL />,
     <Docker />,
   ];
+  const technologiesFromConfig: TechnologyData[] = [
+    TechnologiesConfig.React,
+    TechnologiesConfig.TypeScript,
+    TechnologiesConfig.Sass,
+    TechnologiesConfig.Vue,
+    TechnologiesConfig.PostgreSQL,
+    TechnologiesConfig.Docker,
+  ];
 
   return (
-    <section className={styles.stack}>
-      <Sidebar
-        pageIcon={StackIcon}
-        pageTitle={'Stack'}
-        config={[
-          { icon: ReactIcon, title: 'React', index: 0 },
-          { icon: TSIcon, title: 'TypeScript', index: 1 },
-          { icon: SassIcon, title: 'Sass/Scss', index: 2 },
-          { icon: VueIcon, title: 'Vue', index: 3 },
-          { icon: PgIcon, title: 'PostgreSQL', index: 4 },
-          { icon: DockerIcon, title: 'Docker', index: 5 },
-        ]}
-        onTabClick={setTechnologyIndex}
-        activeIndex={technologyIndex}
-      />
-      <div className={styles.technology}>{technologies[technologyIndex]}</div>
-    </section>
+    <>
+      <section className={styles.stack}>
+        <Sidebar
+          pageIcon={StackIcon}
+          pageTitle={'Stack'}
+          config={[
+            {
+              icon: TechnologiesConfig.React.tabIcon,
+              title: 'React',
+              index: 0,
+            },
+            {
+              icon: TechnologiesConfig.TypeScript.tabIcon,
+              title: 'TypeScript',
+              index: 1,
+            },
+            {
+              icon: TechnologiesConfig.Sass.tabIcon,
+              title: 'Sass/Scss',
+              index: 2,
+            },
+            { icon: TechnologiesConfig.Vue.tabIcon, title: 'Vue', index: 3 },
+            {
+              icon: TechnologiesConfig.PostgreSQL.tabIcon,
+              title: 'PostgreSQL',
+              index: 4,
+            },
+            {
+              icon: TechnologiesConfig.Docker.tabIcon,
+              title: 'Docker',
+              index: 5,
+            },
+          ]}
+          onTabClick={setTechnologyIndex}
+          activeIndex={technologyIndex}
+        />
+        <div className={styles.technology}>{technologies[technologyIndex]}</div>
+      </section>
+
+      <section className={styles.stackMobile}>
+        <HeaderMobile
+          pageIcon={StackIcon}
+          pageTitle={'Stack'}
+          backgroundIcon={BackgroundStackIcon}
+        />
+
+        <div className={styles.technologies}>
+          {technologiesFromConfig.map((technology, index) => (
+            <TechnologyCard
+              key={index}
+              technology={technology}
+            />
+          ))}
+        </div>
+
+        <p className={styles.hint}>
+          * Звезды показывают мою уверенность во владении технологией
+        </p>
+      </section>
+    </>
   );
 };

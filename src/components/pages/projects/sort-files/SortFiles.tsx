@@ -15,18 +15,17 @@ export const SortFiles: React.FC = () => {
           className={styles.demo}
         >
           <img
-            src={'/photos/demos/sortfiles.png'}
-            alt={'SortFiles'}
+            src={ProjectsConfig.SortFiles.demoImage}
+            alt={ProjectsConfig.SortFiles.title}
           />
         </a>
-        <Goals
-          goals={[
-            'Предоставить пользователям удобную платформу для скачивания Sort Files',
-            'Рассказать о возможностях приложения и его преимущества',
-            'Обеспечить поддержку пользователей через раздел вопросов и предложений',
-          ]}
-          withIcons={false}
-        />
+
+        <div className={styles.right}>
+          <Goals
+            goals={ProjectsConfig.SortFiles.goals}
+            withIcons={false}
+          />
+        </div>
       </div>
     </div>
   );

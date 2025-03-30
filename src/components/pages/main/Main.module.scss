@@ -1,6 +1,53 @@
 @use '../../../styles/variables.scss' as variables;
 @use '../../../styles/breakpoints.scss' as breakpoint;
 
+.lines {
+  position: absolute;
+  z-index: -1;
+}
+
+.left {
+  position: fixed;
+  top: 60px;
+}
+
+.right {
+  position: fixed;
+  right: 0;
+  top: 0;
+
+  @include breakpoint.tablet {
+    width: 400px;
+  }
+
+  @include breakpoint.mobile {
+    right: 100px;
+    width: 200px;
+  }
+}
+
+.leftDown {
+  position: fixed;
+  min-width: 300px;
+  left: 0;
+  bottom: 120px;
+  display: none;
+
+  @include breakpoint.mobile {
+    display: block;
+  }
+}
+
+.rightDown {
+  position: fixed;
+  right: 0;
+  top: 420px;
+
+  @include breakpoint.mobile {
+    display: none;
+  }
+}
+
 .slogan {
   display: flex;
   flex-direction: column;
@@ -16,18 +63,19 @@
   }
 
   @include breakpoint.mobile {
-    margin: 50px auto;
+    margin: 70px auto;
     padding: 5px;
   }
 }
 
 .slogan h1 {
   font-size: 70px;
-  line-height: 85px;color: variables.$colorWhite;
+  line-height: 85px;
+  color: variables.$colorWhite;
   text-shadow: 0px 5px 5px variables.$colorWhiteShadow;
 
   @include breakpoint.small-monitor {
-    font-size: 60px;
+    font-size: 65px;
     line-height: 70px;
   }
 
@@ -42,12 +90,16 @@
   }
 
   @include breakpoint.mobile {
-    font-size: 32px;
-    line-height: 40px;
+    font-size: 37px;
+    line-height: 58px;
   }
 
   &:nth-of-type(1) {
     margin-left: 0;
+
+    @include breakpoint.mobile {
+      margin-left: 5px;
+    }
   }
 
   &:nth-of-type(2) {
@@ -66,7 +118,7 @@
     }
 
     @include breakpoint.mobile {
-      margin-left: 60px;
+      margin-left: 45px;
     }
   }
 
@@ -86,7 +138,7 @@
     }
 
     @include breakpoint.mobile {
-      margin-left: 120px;
+      margin-left: 130px;
     }
   }
 }
@@ -114,12 +166,11 @@
 
   @include breakpoint.mobile {
     position: unset;
-    margin: -60px auto;
+    margin: -120px auto;
   }
 }
 .body {
   @include breakpoint.mobile {
-    display: flex;
-    flex-direction: column;
+    margin-top: 20px;
   }
 }

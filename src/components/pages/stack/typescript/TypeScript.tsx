@@ -14,15 +14,17 @@ export const TypeScript: React.FC = () => {
       <TechnologyHeader technology={TechnologiesConfig.TypeScript} />
 
       <div className={styles.main}>
-        <Goals
-          goals={[
-            'Реализовывал строгую типизацию',
-            'Описывал схемы ответов и запросов',
-            'Проектировал интерфейсы и Generics',
-            'Работал с популярными библиотеками',
-            'Рефакторил проекты из JavaScript в TypeScript',
-          ]}
-        />
+        <div className={styles.left}>
+          <Goals
+            goals={[
+              'Реализовывал строгую типизацию',
+              'Описывал схемы ответов и запросов',
+              'Проектировал интерфейсы и Generics',
+              'Работал с популярными библиотеками',
+              'Рефакторил проекты из JavaScript в TypeScript',
+            ]}
+          />
+        </div>
 
         <div className={styles.right}>
           <Container
