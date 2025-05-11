@@ -10,10 +10,10 @@ import { ExperienceItem } from './experience-item/ExperienceItem';
 
 export const Experience: React.FC = () => {
   const experienceConfig = [
-    ExperienceConfig.Freelance,
-    ExperienceConfig.Profilance,
-    ExperienceConfig.ITMO,
     ExperienceConfig.ECOMExpert,
+    ExperienceConfig.ITMO,
+    ExperienceConfig.Profilance,
+    ExperienceConfig.Freelance,
   ];
 
   return (
