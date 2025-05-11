@@ -127,3 +127,16 @@
   font-size: 15px;
   max-width: 350px;
 }
+
+.desktopHint {
+  position: absolute;
+  top: 150px;
+  left: 0;
+  z-index: 1000;
+  max-width: 210px;
+  padding: 20px 0;
+  background-color: variables.$colorBlackAccent; 
+  color: variables.$colorGrayLine;
+  margin: 5px;
+  border-top: 1.5px variables.$colorGrayLine solid;
+}

@@ -10,7 +10,12 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
   experience,
 }) => {
   return (
-    <div className={styles.experienceCard}>
+    <a
+      className={styles.experienceCard}
+      href="/cv.pdf"
+      target="_blank"
+      rel="noreferrer"
+    >
       <div className={styles.title}>
         <h1>{experience.title}</h1>
         <div className={styles.technologies}>
@@ -31,6 +36,6 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
           <ExperienceIcon />
         </div>
       </div>
-    </div>
+    </a>
   );
 };

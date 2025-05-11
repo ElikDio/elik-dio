@@ -25,6 +25,9 @@ export const Experience: React.FC = () => {
           onTabClick={() => {}}
           activeIndex={0}
         />
+        <p className={styles.desktopHint}>
+          * Подробнее о моем опыте работы можно узнать нажав на карточку опыта
+        </p>
         <div className={styles.jobs}>
           <span className={styles.line}></span>
           <div className={styles.timeline}>
@@ -67,7 +70,7 @@ export const Experience: React.FC = () => {
           ))}
         </div>
         <p className={styles.hint}>
-          * Подробнее о моем опыте работы можно узнать нажав на компанию
+          * Подробнее о моем опыте работы можно узнать нажав на карточку опыта
         </p>
 
         <Companies />

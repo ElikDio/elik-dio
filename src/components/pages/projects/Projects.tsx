@@ -104,6 +104,10 @@ export const Projects: React.FC = () => {
             onCardClick={setProjectIndex}
           />
         </div>
+
+        <p className={styles.hint}>
+          * Демо-версии доступны по клику на карточку проекта
+        </p>
       </section>
     </>
   );

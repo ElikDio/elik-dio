@@ -26,7 +26,7 @@
   flex-direction: column;
   position: relative;
   overflow: hidden;
-  
+
   @include breakpoint.tablet {
     display: flex;
   }
@@ -38,7 +38,7 @@
   align-items: center;
   margin: 0 10px;
   gap: 12px;
-  margin-bottom: 50px;
+  // margin-bottom: 50px;
 }
 
 .sortFilesDemo,
@@ -105,4 +105,11 @@
   @include breakpoint.mobile {
     right: -220px;
   }
+}
+
+.hint {
+  margin: 10px 14px 30px 14px;
+  color: variables.$colorGrayLine;
+  font-size: 15px;
+  max-width: 310px;
 }
