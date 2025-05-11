@@ -11,9 +11,9 @@ import { ExperienceItem } from './experience-item/ExperienceItem';
 export const Experience: React.FC = () => {
   const experienceConfig = [
     ExperienceConfig.Freelance,
+    ExperienceConfig.Profilance,
     ExperienceConfig.ITMO,
     ExperienceConfig.ECOMExpert,
-    ExperienceConfig.Profilance,
   ];
 
   return (
@@ -54,10 +54,10 @@ export const Experience: React.FC = () => {
       </section>
 
       <section className={styles.experienceMobile}>
-        <HeaderMobile
-          pageIcon={ExperienceIcon}
-          pageTitle={'Experience'}
-        />
+        <div className={styles.title}>
+          <ExperienceIcon />
+          Experience
+        </div>
         <div className={styles.experienceMobileItems}>
           {experienceConfig.map((expeirenceItem, index) => (
             <ExperienceCard
@@ -66,6 +66,10 @@ export const Experience: React.FC = () => {
             />
           ))}
         </div>
+        <p className={styles.hint}>
+          * Подробнее о моем опыте работы можно узнать нажав на компанию
+        </p>
+
         <Companies />
       </section>
     </>

@@ -36,7 +36,7 @@ export const ProjectsConfig = {
     description: `Проект создан для удобного распространения приложения Sort Files. Сайт позволяет быстро скачать программу, ознакомиться с её возможностями и оставить обратную связь.`,
     shortDescription: `Проект для удобного распространения приложения Sort Files`,
     gitHubLink: 'https://github.com/ElikDio/sort-files-website',
-    anchorLink: '',
+    anchorLink: 'sortfiles',
     backgroundIcon: SortFilesBackIcon,
   },
   SmartDriving: {
@@ -60,8 +60,8 @@ export const ProjectsConfig = {
     ],
     description: `Маркетплейс, созданный для продажи продуктов компании ЛУВ. В рамках проекта я выполнял комплексную работу по фронтенду: верстка и api`,
     shortDescription: `Маркетплейс, созданный для продажи продуктов компании ЛУВ`,
-    gitHubLink: 'https://github.com/ElikDio/sort-files-website',
-    anchorLink: '',
+    // gitHubLink: 'https://github.com/ElikDio/sort-files-website',
+    anchorLink: 'smartdriving',
     backgroundIcon: SmartDrivingBackIcon,
   },
   ARG: {
@@ -93,7 +93,7 @@ export const ProjectsConfig = {
       '/photos/arg/admin-panel.png',
     ],
     gitHubLink: undefined,
-    anchorLink: '',
+    anchorLink: 'arg',
     backgroundIcon: ARGBackIcon,
   },
   GPN: {

@@ -1,0 +1,15 @@
+@use './styles/breakpoints.scss' as breakpoint;
+
+.App {
+  display: block;
+  @include breakpoint.tablet {
+    display: none;
+  }
+}
+
+.AppMobile {
+  display: none;
+  @include breakpoint.tablet {
+    display: block;
+  }
+}

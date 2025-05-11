@@ -13,7 +13,7 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({
   return (
     <a
       className={styles.expeirenceItem}
-      href={MyLinks.HH}
+      href="/cv.pdf"
       target="_blank"
       rel="noreferrer"
     >

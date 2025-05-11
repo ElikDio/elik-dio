@@ -5,7 +5,7 @@ import styles from './SortFiles.module.scss';
 
 export const SortFiles: React.FC = () => {
   return (
-    <div className={styles.sortFiles}>
+    <div className={styles.sortFiles} id={ProjectsConfig.SortFiles.anchorLink}>
       <ProjectsHeader project={ProjectsConfig.SortFiles} />
       <div className={styles.main}>
         <a

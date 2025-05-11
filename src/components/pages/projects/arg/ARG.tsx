@@ -6,7 +6,7 @@ import styles from './ARG.module.scss';
 
 export const ARG: React.FC = () => {
   return (
-    <div className={styles.arg}>
+    <div className={styles.arg} id={ProjectsConfig.ARG.anchorLink}>
       <ProjectsHeader project={ProjectsConfig.ARG} />
 
       <div className={styles.main}>

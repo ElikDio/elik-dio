@@ -5,7 +5,7 @@ import styles from './SmartDriving.module.scss';
 
 export const SmartDriving: React.FC = () => {
   return (
-    <div className={styles.smartDriving}>
+    <div className={styles.smartDriving} id={ProjectsConfig.SmartDriving.anchorLink}>
       <ProjectsHeader project={ProjectsConfig.SmartDriving} />
       <div className={styles.main}>
         <a

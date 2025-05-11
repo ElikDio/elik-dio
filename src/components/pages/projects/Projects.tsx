@@ -12,15 +12,16 @@ import { SmartDriving } from './smart-driving/SmartDriving';
 import { SortFiles } from './sort-files/SortFiles';
 
 export const Projects: React.FC = () => {
-  const [projectIndex, setProjectIndex] = useState<number>(-1);
+  const [projectIndex, setProjectIndex] = useState<number>(0);
 
   const projects = [<SortFiles />, <SmartDriving />, <ARG />];
 
-  useEffect(() => {
-    setTimeout(() => {
-      setProjectIndex(0);
-    }, 1000);
-  }, []);
+  //** Для компонентного вызова */
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setProjectIndex(0);
+  //   }, 1000);
+  // }, []);
 
   return (
     <>
@@ -48,12 +49,13 @@ export const Projects: React.FC = () => {
       </section>
 
       <section className={styles.projectsMobile}>
-        <HeaderMobile
-          pageIcon={ProjectsIcon}
-          pageTitle={'Projects'}
-          backgroundIcon={BackgroundProjectsIcon}
-        />
-
+        <div className={styles.title}>
+          <ProjectsIcon />
+          Projects
+        </div>
+        <div className={styles.backgroundIcon}>
+          <BackgroundProjectsIcon />
+        </div>
         <div className={styles.projectCards}>
           <ProjectCard
             project={ProjectsConfig.SortFiles}

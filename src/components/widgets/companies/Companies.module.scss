@@ -7,19 +7,24 @@
   position: absolute;
   bottom: 1px;
   padding: 16px 0;
+
+  @include breakpoint.tablet {
+    position: static;
+    animation: move 20s linear infinite;
+  }
 }
 
 .images {
   display: flex;
   gap: 40px;
-  animation: move 30s linear infinite;
+  animation: moveDesktop 30s linear infinite;
 
   @include breakpoint.tablet {
-    animation: move 20s linear infinite;
+    animation: moveMobile 10s linear infinite;
   }
 
   @include breakpoint.mobile {
-    animation: move 10s linear infinite;
+    animation: moveMobile 5s linear infinite;
   }
 }
 
@@ -36,11 +41,20 @@
   width: auto;
 }
 
-@keyframes move {
+@keyframes moveDesktop {
   0% {
     transform: translateX(0);
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+
+@keyframes moveMobile {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }

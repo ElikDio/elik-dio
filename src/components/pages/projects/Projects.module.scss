@@ -1,4 +1,5 @@
 @use '../../../styles/breakpoints.scss' as breakpoint;
+@use '../../../styles/variables.scss' as variables;
 
 .projects {
   display: flex;
@@ -77,4 +78,31 @@
 
 .sortFilesDemo img {
   margin-top: -50px;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  color: variables.$colorGrayText;
+  font-size: 18px;
+  padding: 5px 0 12px 16px;
+  margin-top: 40px;
+}
+
+.title svg {
+  height: 24px;
+  width: 24px;
+}
+
+.backgroundIcon {
+  position: absolute;
+  top: -190px;
+  right: -150px;
+  z-index: -1;
+
+  @include breakpoint.mobile {
+    right: -220px;
+  }
 }

@@ -1,4 +1,3 @@
-import { HeaderMobile } from 'src/components/widgets/header-mobile/HeaderMobile';
 import { TechnologiesConfig, TechnologyData } from 'src/utils/technologies';
 import { useState } from 'react';
 import { ReactComponent as BackgroundStackIcon } from '../../../styles/icons/back-technologies/stack.svg';
@@ -74,12 +73,13 @@ export const Stack: React.FC = () => {
       </section>
 
       <section className={styles.stackMobile}>
-        <HeaderMobile
-          pageIcon={StackIcon}
-          pageTitle={'Stack'}
-          backgroundIcon={BackgroundStackIcon}
-        />
-
+        <div className={styles.backgroundIcon}>
+          <BackgroundStackIcon />
+        </div>
+        <div className={styles.title}>
+          <StackIcon />
+          Stack
+        </div>
         <div className={styles.technologies}>
           {technologiesFromConfig.map((technology, index) => (
             <TechnologyCard

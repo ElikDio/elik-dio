@@ -1,18 +1,23 @@
 @use '../../../styles/variables.scss' as variables;
 @use '../../../styles/breakpoints.scss' as breakpoint;
 
+.main {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
 .lines {
-  position: absolute;
+  position: relative;
   z-index: -1;
 }
 
 .left {
-  position: fixed;
+  position: absolute;
   top: 60px;
 }
 
 .right {
-  position: fixed;
+  position: absolute;
   right: 0;
   top: 0;
 
@@ -27,19 +32,17 @@
 }
 
 .leftDown {
-  position: fixed;
+  position: absolute;
   min-width: 300px;
   left: 0;
-  bottom: 120px;
-  display: none;
-
-  @include breakpoint.mobile {
-    display: block;
+  top: -200px; 
+  @include breakpoint.tablet {
+    top: 500px;
   }
 }
 
 .rightDown {
-  position: fixed;
+  position: absolute;
   right: 0;
   top: 420px;
 
@@ -98,7 +101,7 @@
     margin-left: 0;
 
     @include breakpoint.mobile {
-      margin-left: 5px;
+      margin-left: 16px;
     }
   }
 
@@ -118,7 +121,7 @@
     }
 
     @include breakpoint.mobile {
-      margin-left: 45px;
+      margin-left: 60px;
     }
   }
 
@@ -167,6 +170,7 @@
   @include breakpoint.mobile {
     position: unset;
     margin: -120px auto;
+    margin-left: 16px;
   }
 }
 .body {
